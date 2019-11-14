@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "robotoregular";
+  src: url("../font/roboto-regular-webfont.woff2") format("woff2"),
+    url("../font/roboto-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e5e5e5;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  font-family: "robotoregular";
+}
+
+.wrapper {
+  width: 600px;
+  margin: 0 auto;
+  .heading {
+    padding: 0.5rem;
+    background-color: #fcdd6f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 3px solid;
+    align-items: center;
+    .heading__text {
+      margin: 0;
+    }
+  }
+  .users {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 19.5rem;
+    background-color: #ffffff;
+  }
+  .user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%;
+    min-height: 6.5rem;
+    .photo {
+      flex-basis: 10%;
+    }
+    .user-info {
+      flex-basis: 60%;
+      margin: 0 0.5rem;
+      .username {
+        font-size: 1.5rem;
+      }
+      .user-location,
+      .user-login {
+        font-size: 0.9rem;
+      }
+      .user-location::before {
+        content: "";
+        width: 1rem;
+        height: 1rem;
+        background-image: url("../img/mapmarker.png");
+        display: block;
+      }
+      .user-location {
+        display: flex;
+      }
+      .user-login {
+        color: #c7c7c7;
+        text-decoration: underline;
+      }
+    }
+    .arrow-block {
+      flex-basis: 6%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      height: 4rem;
+      .arrow-sign {
+          width: 1.6rem;
+          margin: 0;
+        }
+        .arrow-sign::before {
+            display: block;
+            width: 100%;
+            height:1px;
+            content: '';
+            background-color: #000000;
+            transform: rotate(45deg);
+            position: relative;
+            top: -0.5rem;
+        }
+        
+        .arrow-sign::after {
+            @extend .arrow-sign::before;
+            transform: rotate(-45deg);
+            top: 0.5rem;
+        }
+    }
+    .photo__frame {
+      width: 4.5rem;
+      height: 4.5rem;
+      border-radius: 50%;
+      background-size: cover;
+    }
+  }
+
+  .refresh-block {
+      background-color: #fcdd6f;
+      display: flex;
+      justify-content: center;
+      padding: 0.2rem 0;
+      height: 2rem;
+      .refresh-button {
+        background-color: #fcdd6f;
+        border: none;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        display: flex;
+        cursor: pointer;
+        line-height: 1rem;
+      }
+      .refresh-button::before {
+          content: '';
+          display: block;
+          width: 1.1rem;
+          height: 1.1rem;
+          background-image: url('../img/refresh.png');
+          margin-right: 0.1rem;
+
+      }
+  }
+  .trashbin {
+      background-color: #e37171;
+      width: 0;
+      height: 6.5rem;
+      background-image: url('../img/trashbin.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: width 0.5s linear;
+  }
+  .show {
+    width: 6.5rem;
+  }
+}

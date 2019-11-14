@@ -1,0 +1,25 @@
+{
+  "name": "rxjs-app",
+  "version": "1.0.0",
+  "description": "app with rxjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot --mode development",
+    "build": "webpack --mode production"
+  },
+  "author": "AMNeverova",
+  "license": "ISC",
+  "dependencies": {
+    "rxjs": "^6.5.3",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "devDependencies": {
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0"
+  }
+}
